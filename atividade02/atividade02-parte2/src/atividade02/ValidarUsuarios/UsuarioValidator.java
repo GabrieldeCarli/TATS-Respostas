@@ -1,4 +1,4 @@
-package atividade02.parte2;
+package atividade02.ValidarUsuarios;
 
 
 public class UsuarioValidator {

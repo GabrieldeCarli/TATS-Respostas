@@ -1,7 +1,7 @@
-package atividade02.parte2;
+package atividade02.ValidarUsuarios;
 
 
-import atividade02.parte2.Usuario;
+import atividade02.ValidarUsuarios.Usuario;
 
 /**
  *

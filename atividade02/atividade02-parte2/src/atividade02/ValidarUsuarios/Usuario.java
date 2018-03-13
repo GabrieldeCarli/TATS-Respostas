@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividade02.parte2;
+package atividade02.ValidarUsuarios;
 
 /**
  *

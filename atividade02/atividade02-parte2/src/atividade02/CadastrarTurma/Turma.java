@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package atividade02.parte2;
+package atividade02.CadastrarTurma;
 
 /**
  *
- * @author Aluno
+ * @author gabriel de carli
  */
-public interface SenhaValidator {
-    public boolean verificar(String senha);
+public class Turma {
+
+    String codDisciplina, codTurma;
+    int maximoAlunos;
+    //adicionar os getters e setters
 }

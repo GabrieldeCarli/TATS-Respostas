@@ -7,10 +7,10 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import atividade02.parte2.SenhaValidator;
-import atividade02.parte2.Usuario;
-import atividade02.parte2.UsuarioDAO;
-import atividade02.parte2.UsuarioValidator;
+import atividade02.ValidarUsuarios.SenhaValidator;
+import atividade02.ValidarUsuarios.Usuario;
+import atividade02.ValidarUsuarios.UsuarioDAO;
+import atividade02.ValidarUsuarios.UsuarioValidator;
 
 
 /**
