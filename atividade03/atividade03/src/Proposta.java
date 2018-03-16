@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 /**
  *
- * @author gabri
+ * @author gabriel de carli
  */
 class Proposta {
-    
-    double valorTotal;
-    double valorDaParcela;
+    double valorTotal, valorDaParcela;
     int numeroDeParcelas;
 
     public double getValorTotal() {
@@ -38,6 +32,9 @@ class Proposta {
         this.numeroDeParcelas = numeroDeParcelas;
     }
 
-    
-    
+    public Proposta(double fator, double valorDoEmprestimo, int numeroDeParcelas) {
+        this.numeroDeParcelas = numeroDeParcelas;
+        valorTotal = fator * valorDoEmprestimo;
+        valorDaParcela = valorTotal / numeroDeParcelas;
+    }
 }

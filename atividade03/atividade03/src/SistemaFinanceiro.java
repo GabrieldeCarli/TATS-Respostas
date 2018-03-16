@@ -1,34 +1,39 @@
 
 import java.util.ArrayList;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author gabriel de carli
  */
 class SistemaFinanceiro {
 
-    ArrayList<Proposta> gerarPropostas(double d, double d0) {
+    ArrayList<Proposta> gerarProposta(Cliente c) {
+        ArrayList<Proposta> propostas = new ArrayList<>();
         
-        ArrayList<Proposta> propostas = new ArrayList();
-        Proposta p1 = new Proposta();
-        p1.setValorTotal(2 * 1000.00);
-        p1.setNumeroDeParcelas(2);
-        p1.setValorDaParcela(2 * 1000.00 / 2);
-        propostas.add(p1);
-        
-        Proposta p2 = new Proposta();
-        p2.setValorTotal(2000.00);
-        p2.setNumeroDeParcelas(3);
-        p2.setValorDaParcela(2 * 1000.00 / 3);
-        propostas.add(p2);
-        
+        if (c.getSalario() <= 1000.0) 
+            GerarPropostasParaFaixa1(propostas, c.getEmprestimo());
+        else if (c.getSalario() <= 5000.0) 
+            GerarPropostasParaFaixa2(propostas, c.getEmprestimo());
+        else 
+            GerarPropostasParaFaixa3(propostas, c.getEmprestimo());
         return propostas;
-    
+    }
+
+    public void GerarPropostasParaFaixa3(ArrayList<Proposta> propostas, double valorDoEmprestimo) {
+        propostas.add(new Proposta(1.1, valorDoEmprestimo, 2));
+        propostas.add(new Proposta(1.3, valorDoEmprestimo, 4));
+        propostas.add(new Proposta(1.3, valorDoEmprestimo, 10));
+        propostas.add(new Proposta(1.4, valorDoEmprestimo, 20));
+    }
+
+    public void GerarPropostasParaFaixa2(ArrayList<Proposta> propostas, double valorDoEmprestimo) {
+        propostas.add(new Proposta(1.3, valorDoEmprestimo, 2));
+        propostas.add(new Proposta(1.5, valorDoEmprestimo, 4));
+        propostas.add(new Proposta(1.5, valorDoEmprestimo, 10));
+    }
+
+    public void GerarPropostasParaFaixa1(ArrayList<Proposta> propostas, double valorDoEmprestimo) {
+        propostas.add(new Proposta(2, valorDoEmprestimo, 2));
+        propostas.add(new Proposta(2, valorDoEmprestimo, 3));
     }
 }
