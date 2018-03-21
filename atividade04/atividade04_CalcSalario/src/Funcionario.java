@@ -49,16 +49,4 @@ public class Funcionario {
         this.cargo = cargo;
     }
 
-    double salFinal() {
-        if (cargo == "DESENVOLVEDOR")
-        {   
-            if (salarioBase >= 3000.0){
-                return salarioBase * 0.8; 
-            }else{
-                return salarioBase * 0.9; 
-            }
-        }
-        return 0;
-    }
-    
 }
