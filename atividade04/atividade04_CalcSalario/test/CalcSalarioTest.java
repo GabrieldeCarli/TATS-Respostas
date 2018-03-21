@@ -35,7 +35,7 @@ public class CalcSalarioTest {
     public void CalcSalario(){
     
         Funcionario func = new Funcionario("Gabriel", "gabriel@email.com",
-                3000.0, "DESENVOLVEDOR" );
+                5000.0, "DESENVOLVEDOR" );
         assertEquals(4000.00, func.salFinal(), 0000.1);
         
         
